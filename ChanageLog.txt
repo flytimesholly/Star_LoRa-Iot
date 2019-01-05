@@ -1,3 +1,9 @@
+Version : V0.0.2
+ChangeLog :
+1.add template files,fix scons build error.
+Autor : Mingfen XIAO(mingfen.xiao@qq.com)	
+Data  : 2019.01.05
+/*********************************************************************************************************************/
 Version : V0.0.1
 ChangeLog :
 1.upload the first version demo that base on RT-Thread(366e28f47682f76b3f6df85c3dcbd9785a01fa39) to git repostitory 

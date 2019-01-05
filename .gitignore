@@ -22,7 +22,9 @@
 *.cproject
 
 *.png
-
+*.uvguix.*
+*.saved_uv4
+*.uvoptx
 
 # Libraries
 *.lib
