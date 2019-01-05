@@ -16,6 +16,14 @@
 *.gch
 *.pch
 
+#eclipse files
+*.settings
+*.project
+*.cproject
+
+*.png
+
+
 # Libraries
 *.lib
 *.a
