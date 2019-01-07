@@ -1,8 +1,23 @@
-#ifndef __SPI1_INIT_H__
-#define __SPI1_INIT_H__
+#ifndef __STM32F10X_SPI_BUS_H__
+#define __STM32F10X_SPI_BUS_H__
 
 #include <rtthread.h>
 #include <rtdevice.h>
+#include "stm32f10x.h"
+
+#define USING_SPI_BUS_DEBUG 	/*should be delete in future,shall be implements in menuconfig tools*/
+#ifdef USING_SPI_BUS_DEBUG
+#define spi_bus_printf	rt_kprintf
+#else
+#define	spi_bus_printf
+#endif
+
+
+typedef struct stm32f10x_spi_cs_config_tag
+{
+	GPIO_TypeDef * GPIOx;
+    uint16_t GPIO_Pin;
+}stm32f10x_spi_cs_config;
 
 /*Macro definition area*/
 #define SPI1_GPIO 		GPIOA
@@ -23,10 +38,10 @@ typedef enum enum_SpiModeType_TAG
 	SPI_MODE_MAX
 } Enum_SpiModeType;
 
+#define stm32f10x_spi_bus_channel(channel)	SPI##channel
+
 /*Function declaration area*/
-static void SPI1_RccConfiguration(void);
-static void SPI1_GpioConfiguration_Master(void);
-static void SPI1_GpioConfiguration_Slave(void);
+static int stm32f10x_spi_bus_RccConfig(void);
 
 static int SPI1_HwInit(void);
 int rt_hw_spi1_init(void);

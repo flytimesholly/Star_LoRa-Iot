@@ -19,7 +19,7 @@ if GetDepend(['BSP_USING_I2C']):
     src += ['i2c.c']
 
 if GetDepend(['RT_USING_SPI1']):
-    src += ['spi1_init.c']
+    src += ['stm32f10x_spi_bus.c']
 	
 # add canbus driver.
 if GetDepend('RT_USING_CAN'):

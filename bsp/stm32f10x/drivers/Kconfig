@@ -4,9 +4,24 @@ config BSP_USING_I2C
     select RT_USING_I2C
     select RT_USING_I2C_BITOPS
 
-config RT_USING_SPI1
-    bool "Enable SPI1 (PA4/5/6/7)"
+config RT_USING_SPI
+    bool "Enable SPI bus"
     default n
+
+	if RT_USING_SPI
+	config RT_USING_SPI1
+		bool "Enable SPI1"
+		default y
+	
+	config RT_USING_SPI2
+		bool "Enable SPI2"
+		default n
+
+	config RT_USING_SPI3
+		bool "Enable SPI3"
+		default n			
+	endif
+
 	
 config RT_USING_UART1
     bool "Enable UART1 (PA9/10)"

@@ -59,7 +59,7 @@ struct rt_i2c_bus_device
     rt_uint32_t  retries;
     void *priv;
 };
-
+#define RT_I2C_DEBUG
 #ifdef RT_I2C_DEBUG
 #define i2c_dbg(fmt, ...)   rt_kprintf(fmt, ##__VA_ARGS__)
 #else

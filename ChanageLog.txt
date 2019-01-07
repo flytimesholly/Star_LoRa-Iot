@@ -1,3 +1,13 @@
+Version : V0.0.3
+ChangeLog :
+1.Kconfig : add support 3 channel base on stm32f10x
+2.SConscript : modify geration source name
+3.spi1_init : rename stm32f10x_spi_bus
+4.stm32f10x_spi_bus : implements some function
+5.kservice.c : add time infromation in the printf
+Autor : Mingfen XIAO(mingfen.xiao@qq.com)	
+Data  : 2019.01.08
+/*********************************************************************************************************************/
 Version : V0.0.2
 ChangeLog :
 1.add template files,fix scons build error.

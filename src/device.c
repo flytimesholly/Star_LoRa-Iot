@@ -127,12 +127,13 @@ rt_device_t rt_device_find(const char *name)
          node  = node->next)
     {
         object = rt_list_entry(node, struct rt_object, list);
+        rt_kprintf("object is %s,the target name is %s \r\n",object->name,name);
         if (rt_strncmp(object->name, name, RT_NAME_MAX) == 0)
         {
             /* leave critical */
             if (rt_thread_self() != RT_NULL)
                 rt_exit_critical();
-
+            rt_kprintf("rt_device_find,find device !\r\n");
             return (rt_device_t)object;
         }
     }
@@ -142,6 +143,7 @@ rt_device_t rt_device_find(const char *name)
         rt_exit_critical();
 
     /* not found */
+    rt_kprintf("rt_device_find,not find device !\r\n");
     return RT_NULL;
 }
 RTM_EXPORT(rt_device_find);

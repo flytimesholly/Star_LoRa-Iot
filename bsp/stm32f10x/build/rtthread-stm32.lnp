@@ -7,7 +7,7 @@
 ".\build\usart.o"
 ".\build\gpio.o"
 ".\build\i2c.o"
-".\build\spi1_init.o"
+".\build\stm32f10x_spi_bus.o"
 ".\build\system_stm32f10x.o"
 ".\build\stm32f10x_crc.o"
 ".\build\stm32f10x_rcc.o"

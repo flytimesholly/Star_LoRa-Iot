@@ -20,7 +20,7 @@
 *.settings
 *.project
 *.cproject
-
+*.crf
 *.png
 *.uvguix.*
 *.saved_uv4

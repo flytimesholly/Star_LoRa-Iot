@@ -78,7 +78,7 @@ int rt_hw_i2c_init(void)
     
     rt_memset((void *)&stm32_i2c, 0, sizeof(struct rt_i2c_bus_device));
     stm32_i2c.priv = (void *)&stm32_i2c_bit_ops;
-    rt_i2c_bit_add_bus(&stm32_i2c, "i2c1");   
+    rt_i2c_bit_add_bus(&stm32_i2c, "i2c1");
         
     return 0;
 }
